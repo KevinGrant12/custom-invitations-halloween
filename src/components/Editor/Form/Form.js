@@ -30,6 +30,7 @@ export default class Form extends Component {
   }
   handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
+    this.props.updateState(event.target.name, event.target.value);
   }
   render() {
     return(

@@ -27,7 +27,7 @@ export default class Invitation extends Component {
             <h3>Join our party until dawn breaks you!</h3>
             <h4>Bloody Details:</h4>
             <ul>
-              <li><strong>Where: </strong> 3405 Thistle Lane, Lake Villa</li>
+              <li><strong>Where: </strong> {this.props.location}</li>
               <li><strong>When: </strong> Thursday 10/18 @ 9pm</li>
               <li><strong>Email: </strong>spooky@gmail.com</li>
               <li><strong>Phone: </strong> 666-666-6660</li>
