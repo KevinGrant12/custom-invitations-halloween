@@ -1,0 +1,81 @@
+.form {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 4rem;
+  flex-basis: 50%;
+  background: var(--red);
+  overflow: auto;
+}
+.form form {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  max-width: 400px;
+}
+.form h4 {
+  color: white;
+  margin-bottom: .25rem;
+  text-align: left;
+}
+.form fieldset {
+  border: none;
+}
+.form label {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  align-items: flex-start;
+  margin-bottom: .75rem;
+}
+.form label input {
+  width: 100%;
+  padding: .5rem;
+  border: none;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 1rem;
+}
+.form input[type="submit"] {
+  border: none;
+  background: var(--burgendy);
+  font-family: var(--amatic);
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.form input[type="submit"]:hover {
+  opacity: 0.8;
+}
+.form select {
+  border: none;
+}
+
+/* Form Dates */
+.form-date-wrap {
+  display: flex;
+  justify-content: flex-start;
+}
+.form-date-wrap label {
+  width: auto;
+  margin-right: 2rem;
+}
+.form-date-wrap select {
+  width: 100%;
+}
+
+/* Form Checkboxes */
+.form .bringers label {
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row;
+  color: white;
+  line-height: 1;
+}
+.form .bringers input {
+  width: auto;
+  margin-right: .75rem;
+  margin-top: .1rem;
+  border: none;
+  background: white;
+}

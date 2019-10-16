@@ -1,0 +1,11 @@
+.editor {
+  display: flex;
+  height: 100vh;
+  overflow: auto;
+  overflow: hidden;
+}
+@media (max-width: 991px) {
+  .editor {
+    flex-flow: column-reverse;
+  }
+}

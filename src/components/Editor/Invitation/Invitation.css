@@ -1,0 +1,235 @@
+.invitation-wrap {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  flex-basis: 50%;
+}
+.invitation {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+  border: 2px solid white;
+  color: white;
+  padding: 2rem 2rem 4rem;
+  background: url("./invitation-0.jpg") no-repeat center/cover;
+}
+.invitation-text {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: left;
+  position: relative;
+}
+.invitation h1 {
+  font-size: 2.5rem;
+  font-family: savath;
+  color: white;
+  text-align: center; 
+  margin-bottom: 1rem;
+}
+.invitation h3 {
+  font-family: var(--amatic);
+  font-size: 1.75rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.invitation h4 {
+  font-size: 1.5rem;
+  font-family: var(--poiret);
+  border-bottom: 1px solid white;
+  margin-bottom: 1rem;
+  padding-bottom: .1rem;
+}
+.invitation p {
+  font-family: var(--sans);
+  margin-bottom: .5rem;
+}
+.invitation ul {
+  width: 60%;
+  margin-bottom: 1rem;
+  transform: translateX(10%);
+}
+.invitation ul:not(:first-of-type) {
+  list-style-type: disc;
+}
+.invitation ul p strong {
+  border-bottom: 2px dotted rgba(255,255,255,0.6);
+  display: inline-block;
+}
+
+/* Images */
+.invitation img.zombies {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.invitation img.zombies:nth-of-type(2) {
+  opacity: 0.2;
+  animation: shimmer2 .25s linear 10s 1 forwards;
+}
+.invitation .moon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: black;
+  opacity: 0.4;
+  animation: moon 90s linear infinite forwards;
+}
+.invitation img.clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}
+.invitation img.blood {
+  display: flex;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.invitation img.blood-one {
+  animation: shimmer 3s linear infinite alternate;
+}
+.invitation img.blood-two {
+  animation: shimmer 2s linear infinite reverse;
+}
+@keyframes shimmer {
+  0% {
+    transform: translate(0, 0);
+  }
+  18% {
+    transform: translate(-1px, 0);
+    filter: blur(10%);
+  }
+  45% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+    filter: blur(20%);
+  }
+  83% {
+    transform: translate(-5px, 0);
+  }
+  90% {
+    transform: translate(4px, -4px);
+  }
+  100% {
+    transform: translate(-2px, 0);
+  }
+}
+@keyframes shimmer2 {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translate(20px, -30px) scale(1.2);
+    opacity: 0.2;
+  }
+  60% {
+    transform: translate(-40px, -30px) scale(1.3);
+    opacity: 0.1;
+  }
+  70% {
+    transform: translate(-40px, -20px) scale(1.25);
+    opacity: 0.1;
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes moon {
+  0% {
+    transform: translate(50%, 80%);
+  }
+  5% {
+    bottom: 0;
+  }
+  5.05% {
+    bottom: -5px;
+    right: 0;
+    opacity: 0.4;
+  }
+  5.1% {
+    bottom: 5px;
+    right: -15px;
+    opacity: 0.3;
+  }
+  5.15% {
+    bottom: -10px;
+    right: -5px;
+  }
+  5.2% {
+    bottom: 7px;
+    right: 3px;
+  }
+  5.3% {
+    bottom: 0;
+    right: 0;
+    opacity: 0.4;
+  }
+  30% {
+    bottom: 0;
+  }
+  30.05% {
+    bottom: -5px;
+    right: 0;
+    opacity: 0.4;
+  }
+  30.1% {
+    bottom: 5px;
+    right: -100px;
+    opacity: 0.1;
+  }
+  30.15% {
+    bottom: -10px;
+    right: -5px;
+  }
+  30.2% {
+    bottom: 7px;
+    right: 3px;
+  }
+  30.3% {
+    bottom: 0;
+    right: 0;
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-50%, -200%);
+    opacity: 0;
+  }
+}
+
+/* Social */
+.invitation .social {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.invitation .social a {
+  color: white;
+  font-family: var(--amatic);
+  font-size: 1.5rem;
+  transition: all .3s ease;
+}
+.invitation .social a:hover {
+  color: var(--red);
+}
+.invitation .social a i {
+  margin-right: .75rem;
+  color: var(--red);
+}

@@ -1,0 +1,23 @@
+.landing {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.landing h1 {
+  color: white;
+}
+.landing h3 {
+  color: white;
+}
+.landing p {
+  color: white;
+}
+.landing a {
+  color: white;
+}
