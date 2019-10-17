@@ -53,6 +53,12 @@ export default class Editor extends Component {
           date={this.state.date}
           email={this.state.email}
           phone={this.state.phone}
+          booz={this.state.booz}
+          snacks={this.state.snacks}
+          candy={this.state.candy}
+          music={this.state.music}
+          children={this.state.children}
+          gross={this.state.gross}
         />
         <Form
           updateState={this.updateState}

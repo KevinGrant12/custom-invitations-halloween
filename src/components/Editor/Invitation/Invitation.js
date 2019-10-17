@@ -29,15 +29,15 @@ export default class Invitation extends Component {
               </ul>
               <ul class="extras">
                 <h4><strong>Please DO bring:</strong></h4>
-                <li>Bloody Booz</li>
-                <li>Sinister Snacks</li>
-                <li>Creepy Candy</li>
-                <li>Mortifying Music</li>
+                {this.props.booz && <li>Bloody Booz</li>}
+                {this.props.snacks && <li>Sinister Snacks</li>}
+                {this.props.candy && <li>Creepy Candy</li>}
+                {this.props.music && <li>Mortifying Music</li>}
               </ul>
               <ul class="extras">
                 <h4><strong>Please DO NOT bring</strong></h4>
-                <li>Terrible Toddlers</li>
-                <li>Actual dead things</li>
+                {this.props.children && <li>Terrible Toddlers</li>}
+                {this.props.gross && <li>Actual dead things</li>}
               </ul>
 
             </div>

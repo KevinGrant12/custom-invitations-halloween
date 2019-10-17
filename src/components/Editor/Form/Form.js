@@ -36,12 +36,19 @@ export default class Form extends Component {
     this.setState({ date })
     this.props.updateDate(date,date);
   }
+  handleCheckbox = (event) => {
+    const target = event.target;
+    const name = target.name;
+    const value = target.checked;
+    this.setState({ [name]: value });
+    this.props.updateState(name, value);
+  }
   render() {
     return(
       <section className="form">
         <div className="form-details">
           <h1>Custom Invitation Creator</h1>
-          <p>Kick off the Halloween bash! Complete the form below and watch your creation come to life!</p>
+          <p>Kick off your Halloween bash! Complete the form below and watch your creation come to life!</p>
         </div>
         <form onSubmit={this.handleSubmit}>
           <label>
@@ -112,7 +119,7 @@ export default class Form extends Component {
                   type="checkbox"
                   name="booz"
                   checked={this.state.booz}
-                  onChange={this.handleChange}
+                  onChange={this.handleCheckbox}
                 />
                 Alcohol
               </label>
@@ -121,7 +128,7 @@ export default class Form extends Component {
                   type="checkbox"
                   name="snacks"
                   checked={this.state.snacks}
-                  onChange={this.handleChange}
+                  onChange={this.handleCheckbox}
                 />
                 Snacks
               </label>
@@ -130,7 +137,7 @@ export default class Form extends Component {
                   type="checkbox"
                   name="candy"
                   checked={this.state.candy}
-                  onChange={this.handleChange}
+                  onChange={this.handleCheckbox}
                 />
                 Candy
               </label>
@@ -139,7 +146,7 @@ export default class Form extends Component {
                   type="checkbox"
                   name="music"
                   checked={this.state.music}
-                  onChange={this.handleChange}
+                  onChange={this.handleCheckbox}
                 />
                 Music
               </label>
@@ -152,7 +159,7 @@ export default class Form extends Component {
                   type="checkbox"
                   name="children"
                   checked={this.state.children}
-                  onChange={this.handleChange}
+                  onChange={this.handleCheckbox}
                 />
                 Children
               </label>
@@ -161,7 +168,7 @@ export default class Form extends Component {
                   type="checkbox"
                   name="gross"
                   checked={this.state.gross}
-                  onChange={this.handleChange}
+                  onChange={this.handleCheckbox}
                 />
                 Actual Gross Stuff
               </label>

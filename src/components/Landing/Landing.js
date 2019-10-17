@@ -6,10 +6,10 @@ export default class Landing extends Component {
   render() {
     return(
       <section className="landing">
-        <h3>customize your own</h3>
+        <h3>Customize Your Own</h3>
         <h1>Halloween Party Invitation</h1>
         <p>Receive a custom party invitation package to send out for your holiday event.</p>
-        <Link to='/editor'>Get Started</Link>
+        <Link to='/editor'><i class="fas fa-skull"></i>Get Started</Link>
       </section>
     );
   }
