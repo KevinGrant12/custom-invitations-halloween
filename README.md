@@ -3,7 +3,7 @@
 A simple application that allows the user to populate a Halloween invitation and send it to their friends.
 
 ## Project Demo
-[Custom Invitations App](https://test.com)
+[Custom Invitations App](custom-invitations-halloween.netlify.com)
 
 ## Features
 * Custom invitation template
