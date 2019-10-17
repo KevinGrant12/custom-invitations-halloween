@@ -10,7 +10,7 @@ A simple application that allows the user to populate a Halloween invitation and
 * Unique input fields
 * Creative & spooky touch
 
-# Stack
+## Stack
 * React.js
 * Node.js
 
