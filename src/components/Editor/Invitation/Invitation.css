@@ -1,16 +1,17 @@
 .invitation-wrap {
   background: black;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 4rem;
   flex-basis: 50%;
+  padding: 4rem;
+  height: 100vh;
+  overflow: auto;;
 }
 .invitation {
+  width: 100%;
   position: relative;
   overflow: hidden;
-  width: 100%;
-  min-height: 100%;
   border: 2px solid white;
   color: white;
   padding: 2rem 2rem 4rem;
@@ -27,37 +28,33 @@
   font-size: 2.5rem;
   font-family: savath;
   color: white;
-  text-align: center; 
-  margin-bottom: 1rem;
+  text-align: center;
 }
 .invitation h3 {
   font-family: var(--amatic);
   font-size: 1.75rem;
   text-align: center;
-  margin-bottom: 2rem;
-}
-.invitation h4 {
-  font-size: 1.5rem;
-  font-family: var(--poiret);
-  border-bottom: 1px solid white;
   margin-bottom: 1rem;
-  padding-bottom: .1rem;
 }
 .invitation p {
   font-family: var(--sans);
   margin-bottom: .5rem;
 }
 .invitation ul {
-  width: 60%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   transform: translateX(10%);
 }
-.invitation ul:not(:first-of-type) {
+.invitation ul.extras {
   list-style-type: disc;
 }
-.invitation ul p strong {
-  border-bottom: 2px dotted rgba(255,255,255,0.6);
-  display: inline-block;
+.invitation ul.extras li {
+  display: list-item;
+}
+ul li {
+  display: flex;
+}
+ul.info li h4 {
+  margin-right: .5rem;;
 }
 
 /* Images */
@@ -67,7 +64,7 @@
   left: 0;
   width: 100%;
 }
-.invitation img.zombies:nth-of-type(2) {
+.invitation img.zombies2 {
   opacity: 0.2;
   animation: shimmer2 .25s linear 10s 1 forwards;
 }
@@ -215,9 +212,8 @@
 /* Social */
 .invitation .social {
   position: absolute;
-  bottom: 2rem;
-  left: 0;
-  width: 100%;
+  bottom: 1rem;
+  right: 1rem;
   text-align: center;
 }
 .invitation .social a {
@@ -232,4 +228,10 @@
 .invitation .social a i {
   margin-right: .75rem;
   color: var(--red);
+}
+
+@media(max-width: 767px) {
+  .invitation-wrap {
+    padding: 2rem;
+  }
 }

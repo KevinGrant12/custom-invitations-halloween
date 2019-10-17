@@ -6,12 +6,6 @@ import BloodOne from './invitation-blood-1.png';
 import BloodTwo from './invitation-blood-2.png';
 
 export default class Invitation extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    }
-  }
   render() {
     return(
       <div className="invitation-wrap">
@@ -20,33 +14,36 @@ export default class Invitation extends Component {
           <img src={BloodTwo} class="blood blood-two" alt="blood overlay" />
           <div className="moon"></div>
           <img src={Zombies} class="zombies" alt="zombies" />
-          <img src={Zombies} class="zombies" alt="zombies" />
+          <img src={Zombies} class="zombies zombies2" alt="zombies" />
           <img src={Clouds} class="clouds" alt="clouds" />
           <div className="invitation-text">
             <h1>Happy Halloween</h1>
-            <h3>Join our party until dawn breaks you!</h3>
-            <h4>Bloody Details:</h4>
-            <ul>
-              <li><strong>Where: </strong> {this.props.location}</li>
-              <li><strong>When: </strong> Thursday 10/18 @ 9pm</li>
-              <li><strong>Email: </strong>spooky@gmail.com</li>
-              <li><strong>Phone: </strong> 666-666-6660</li>
-            </ul>
-            <ul>
-              <p><strong>Please bring one of the following:</strong></p>
-              <li>Bloody Booz</li>
-              <li>Sinister Snacks</li>
-              <li>Creepy Candy</li>
-              <li>Mortifying Music</li>
-            </ul>
-            <ul>
-              <p><strong>Do not bring</strong></p>
-              <li>Terrible Toddlers</li>
-              <li>Anything that is actually dead or disgusting</li>
-            </ul>
+            <h3>{this.props.greeting}</h3>
+            <div className="lists-wrap">
+              <ul class="info">
+                <li><h4>Who:</h4>{this.props.host}</li>
+                <li><h4>Where:</h4> {this.props.location}</li>
+                <li><h4>When:</h4>{this.props.date}</li>
+                <li><h4>Phone:</h4> {this.props.phone}</li>
+                <li><h4>Email:</h4>{this.props.email}</li>
+              </ul>
+              <ul class="extras">
+                <h4><strong>Please DO bring:</strong></h4>
+                <li>Bloody Booz</li>
+                <li>Sinister Snacks</li>
+                <li>Creepy Candy</li>
+                <li>Mortifying Music</li>
+              </ul>
+              <ul class="extras">
+                <h4><strong>Please DO NOT bring</strong></h4>
+                <li>Terrible Toddlers</li>
+                <li>Actual dead things</li>
+              </ul>
+
+            </div>
           </div>
           <div className="social">
-            <a href="#"><i class="fab fa-facebook"></i>RSVP if you dare...</a>
+            <a href="#!"><i class="fab fa-facebook"></i>RSVP if you dare...</a>
           </div>
         </div>
         
